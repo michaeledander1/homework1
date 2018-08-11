@@ -15,8 +15,9 @@ function rest(object) {
     return object
 }
 
-rest(hero);
-console.log(rest(hero));
+function sleepAtInn() {
+    rest(hero);
+};
 
 document.getElementById("inn").addEventListener('click', function(){
     rest(hero);
