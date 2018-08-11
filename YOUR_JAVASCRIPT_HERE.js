@@ -33,7 +33,9 @@ function pickUpItem(heroLikeObject, object) {
 
 function pickUpDagger() {
     pickUpItem(hero, dagger)
-    return hero
+    var removeDagger = document.getElementById('dagger');
+    removeDagger.parentNode.removeChild(removeDagger);    
+    return (hero, removeDagger)
 }
 
 // equip code
