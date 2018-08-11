@@ -64,3 +64,13 @@ function displayHeroStats() {
 }
 
 displayHeroStats(hero);
+
+//Working on changing name via form
+function changeName() {
+    var userName = window.prompt("Change hero name")
+    hero.name = userName
+    console.log(userName)
+    return hero.name
+    }
+
+changeName();
