@@ -45,3 +45,20 @@ function equipWeapon(heroLikeObject) {
 function heroEquipWeapon() {
     equipWeapon(hero);
 }
+
+//Write `displayStats` function that writes your hero's name, health, weapontype, weapon damage to the page. Call it at the end of your script
+
+
+function writeStats(character) {
+    const stats = `Hero's name: ${character.name}, Hero's weapon: ${character.weapon.type}, Damage Dealt with ${character.weapon.type}: ${character.weapon.damage}`
+    return stats
+}
+console.log(writeStats(hero));
+
+
+function displayHeroStats() {
+    const displayStatsSpot = document.getElementById('displayHeroStats')
+    displayStatsSpot.innerHTML = writeStats(hero);
+}
+
+displayHeroStats(hero);
