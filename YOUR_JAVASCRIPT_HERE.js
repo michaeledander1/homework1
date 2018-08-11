@@ -36,11 +36,12 @@ function pickUpDagger() {
     return hero
 }
 
-console.log(pickUpDagger());
+// equip code
+function equipWeapon(heroLikeObject) {
+    if (heroLikeObject.inventory.length !== 0) {
+    heroLikeObject.weapon = heroLikeObject.inventory[0]
+}}
 
-
-
-function equipWeapon() {
-
+function heroEquipWeapon() {
+    equipWeapon(hero);
 }
-
