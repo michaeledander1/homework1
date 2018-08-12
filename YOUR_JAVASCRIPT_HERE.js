@@ -1,3 +1,5 @@
+//Starting last 4 hours
+
 // Write your JS here
 var hero = {
     name: "Bernie Sanders",
