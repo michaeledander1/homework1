@@ -12,6 +12,15 @@ var hero = {
     },
 }
 
+var creepyRatThing = {
+    name: "Creepy rat thing",
+    health: 5,
+    weapon: {
+        type: "bite",
+        damage: 1
+    }
+}
+
 // Resting Code
 function rest(object) {
     object.health = 10;
@@ -24,7 +33,7 @@ function sleepAtInn() {
 
 // Items
 var dagger = {
-    type: "Dagger",
+    type: "dagger",
     damage: 2
 }
 
@@ -58,7 +67,6 @@ function writeStats(character) {
     const stats = `Hero's name: ${character.name}, Hero's weapon: ${character.weapon.type}, Damage Dealt with ${character.weapon.type}: ${character.weapon.damage}`
     return stats
 }
-console.log(writeStats(hero));
 
 
 function displayHeroStats() {
@@ -68,7 +76,7 @@ function displayHeroStats() {
 
 displayHeroStats(hero);
 
-//Working on changing name via form
+//Name Change
 function changeName() {
     function change() { 
         var userName = document.getElementById('newName').value
@@ -78,4 +86,23 @@ function changeName() {
     }
     change()
     displayHeroStats(hero);
+}
+//fighting
+function fightFunction(health, damage) {
+    var attack = health - damage
+    creepyRatThing.health = attack
+}
+function fight() {
+    fightFunction(creepyRatThing.health, hero.weapon.damage)
+    var badGuy = document.getElementById('badGuy');   
+    if (creepyRatThing.health <= 0) {
+        badGuy.parentNode.removeChild(badGuy);
+    }
+    console.log(creepyRatThing.health)
+    return creepyRatThing.health
+}
+
+function powerAttack() {
+    ddb = fight()
+    return ddb * 2
 }
