@@ -24,7 +24,7 @@ function sleepAtInn() {
 
 // Items
 var dagger = {
-    type: "dagger",
+    type: "Dagger",
     damage: 2
 }
 
@@ -48,6 +48,7 @@ function equipWeapon(heroLikeObject) {
 
 function heroEquipWeapon() {
     equipWeapon(hero);
+    displayHeroStats(hero)
 }
 
 //Write `displayStats` function that writes your hero's name, health, weapontype, weapon damage to the page. Call it at the end of your script
@@ -69,10 +70,12 @@ displayHeroStats(hero);
 
 //Working on changing name via form
 function changeName() {
-    var userName = window.prompt("Change hero name")
-    hero.name = userName
-    console.log(userName)
-    return hero.name
+    function change() { 
+        var userName = document.getElementById('newName').value
+        hero.name = userName
+        console.log(userName)
+        return hero.name
     }
-
-changeName();
+    change()
+    displayHeroStats(hero);
+}
