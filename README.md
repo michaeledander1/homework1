@@ -1,3 +1,7 @@
+# Basic Hero Game
+
+This was a homework assignment at Codaisseur. At this point I had 5 days of experience with coding. Below is the assignment.
+
 # Beginner Bootcamp Homework
 
 Hello beginner bootcampers. Here is your first formal homework  assignment!
